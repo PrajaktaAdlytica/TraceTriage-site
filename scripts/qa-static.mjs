@@ -86,6 +86,23 @@ for (const p of files.filter(
     }
   }
 }
+// Vercel cleanUrls redirects /intro/index.html to /intro. Asset paths
+// must also resolve when the iframe document has that extensionless URL.
+const introHTML = await readFile(path.join(root, "intro/index.html"), "utf8");
+const introVideoSource = introHTML.match(/<video\b[\s\S]*?\bsrc="([^"]+)"/)[1];
+const productionVideoPath = new URL(
+  introVideoSource,
+  "https://example.com/intro",
+).pathname;
+if (
+  productionVideoPath !== "/intro/corridor.mp4" ||
+  !(await resolveURL(productionVideoPath, path.join(root, "intro/index.html")))
+    ?.file
+)
+  issues.push({
+    problem: "Intro video fails under Vercel clean URLs",
+    url: productionVideoPath,
+  });
 const report = {
   date: "2026-10-10",
   routes: pages.length,
