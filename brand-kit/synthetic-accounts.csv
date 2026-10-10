@@ -1,0 +1,13 @@
+id,display_id,original_tier,scenario_written_tier,evidence_status,trace_id,write_batch_id,source_id,owner
+ACC-001,A-001,Standard,Enterprise,observed,TR-27,WB-3,evt-0001,Maya Chen (fictional)
+ACC-002,A-002,Standard,Enterprise,observed,TR-27,WB-3,evt-0002,Maya Chen (fictional)
+ACC-003,A-003,Standard,Enterprise,observed,TR-27,WB-3,evt-0003,Maya Chen (fictional)
+ACC-004,A-004,Standard,Enterprise,observed,TR-27,WB-3,evt-0004,Maya Chen (fictional)
+ACC-005,A-005,Standard,Enterprise,observed,TR-27,WB-3,evt-0005,Maya Chen (fictional)
+ACC-006,A-006,Standard,Enterprise,observed,TR-27,WB-3,evt-0006,Maya Chen (fictional)
+ACC-007,A-007,Standard,Enterprise,observed,TR-27,WB-3,evt-0007,Maya Chen (fictional)
+ACC-008,A-008,Standard,Enterprise,observed,TR-27,WB-3,evt-0008,Maya Chen (fictional)
+ACC-009,A-009,Standard,Enterprise,inferred,TR-27,WB-3,,Maya Chen (fictional)
+ACC-010,A-010,Standard,Enterprise,inferred,TR-27,WB-3,,Maya Chen (fictional)
+ACC-011,A-011,Standard,Enterprise,inferred,TR-27,WB-3,,Maya Chen (fictional)
+ACC-012,A-012,Standard,Enterprise,awaiting,TR-27,WB-3,,

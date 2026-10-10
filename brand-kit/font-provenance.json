@@ -1,0 +1,42 @@
+[
+  {
+    "file": "fonts/Manrope-OFL.txt",
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Manrope.ttf",
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Manrope.woff2",
+    "sha256": "0b4f75338e3cbcade28ab50b353af546546b4bd546f6927cab55564ae71da725",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Newsreader-Italic.ttf",
+    "sha256": "796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Newsreader-Italic.woff2",
+    "sha256": "89a4baf5f0c4aea67c66f47cf780ffa45ccf5735f693f2169a9079592fe74a88",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Newsreader-OFL.txt",
+    "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Newsreader.ttf",
+    "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+    "license": "SIL OFL1.1; see included OFL notices"
+  },
+  {
+    "file": "fonts/Newsreader.woff2",
+    "sha256": "79e5c9cb7426d793dccd2fbc8d58c69fd7c2580898af4ac704e880b0806af8b1",
+    "license": "SIL OFL1.1; see included OFL notices"
+  }
+]

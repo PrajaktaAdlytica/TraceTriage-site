@@ -1,0 +1,91 @@
+{
+  "brand": "TraceTriage",
+  "synthetic": true,
+  "incident": "INC-027",
+  "frames": [
+    {
+      "id": "01-agent-request",
+      "title": "One agent. One write.",
+      "subtitle": "A CRM tool call targets an account tier.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": false,
+      "svg": "svg/01-agent-request.svg",
+      "png": "frames/01-agent-request.png",
+      "plate": "flow-plates/01-agent-request-plate.png",
+      "overlay": "overlays/01-agent-request-overlay.png"
+    },
+    {
+      "id": "02-observed-change",
+      "title": "A field changed. Now what?",
+      "subtitle": "The request became an observed change in account A-001.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": false,
+      "svg": "svg/02-observed-change.svg",
+      "png": "frames/02-observed-change.png",
+      "plate": "flow-plates/02-observed-change-plate.png",
+      "overlay": "overlays/02-observed-change-overlay.png"
+    },
+    {
+      "id": "03-linked-evidence",
+      "title": "Reconstruct the cause.",
+      "subtitle": "Connect the changed record to its agent session and write batch.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": false,
+      "svg": "svg/03-linked-evidence.svg",
+      "png": "frames/03-linked-evidence.png",
+      "plate": "flow-plates/03-linked-evidence-plate.png",
+      "overlay": "overlays/03-linked-evidence-overlay.png"
+    },
+    {
+      "id": "04-account-impact",
+      "title": "See the impact. Keep the uncertainty.",
+      "subtitle": "Twelve accounts are in scope. Their evidence is not equally certain.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": false,
+      "svg": "svg/04-account-impact.svg",
+      "png": "frames/04-account-impact.png",
+      "plate": "flow-plates/04-account-impact-plate.png",
+      "overlay": "overlays/04-account-impact-overlay.png"
+    },
+    {
+      "id": "05-owner-timeline",
+      "title": "Put a person beside the evidence.",
+      "subtitle": "Keep responsibility and the evidence timeline in the same incident.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": false,
+      "svg": "svg/05-owner-timeline.svg",
+      "png": "frames/05-owner-timeline.png",
+      "plate": "flow-plates/05-owner-timeline-plate.png",
+      "overlay": "overlays/05-owner-timeline-overlay.png"
+    },
+    {
+      "id": "06-human-review",
+      "title": "Keep people in control.",
+      "subtitle": "Know what changed. Understand the impact. Prepare a defensible response.",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "dark": true,
+      "svg": "svg/06-human-review.svg",
+      "png": "frames/06-human-review.png",
+      "plate": "flow-plates/06-human-review-plate.png",
+      "overlay": "overlays/06-human-review-overlay.png"
+    }
+  ]
+}

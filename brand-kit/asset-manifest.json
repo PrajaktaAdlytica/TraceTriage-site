@@ -1,0 +1,1476 @@
+{
+  "version": "1.0",
+  "selected_direction": "Horizon Ledger / displayed option 3",
+  "visuals": [
+    {
+      "id": "trace-to-approval",
+      "route": "/",
+      "section": "Mechanism",
+      "kind": "flow",
+      "title": "From a tool call to a defensible decision",
+      "labels": [
+        "Trace TR-27",
+        "Write WB-3",
+        "12 accounts",
+        "Owner",
+        "Approval"
+      ],
+      "background": "chalk",
+      "file": "visuals/trace-to-approval.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "From a tool call to a defensible decision. Concept preview."
+    },
+    {
+      "id": "evidence-coverage",
+      "route": "/",
+      "section": "Credibility",
+      "kind": "coverage",
+      "title": "Synthetic evidence coverage",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/evidence-coverage.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Synthetic evidence coverage. Concept preview."
+    },
+    {
+      "id": "crm-evidence-table",
+      "route": "/",
+      "section": "Evidence",
+      "kind": "table",
+      "title": "Oakridge Services / CRM tier mutation",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/crm-evidence-table.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Oakridge Services / CRM tier mutation. Concept preview."
+    },
+    {
+      "id": "fragmented-workflow",
+      "route": "/why-change",
+      "section": "Hero",
+      "kind": "flow",
+      "title": "The current reconstruction gap",
+      "labels": [
+        "Trace tool",
+        "Tool logs",
+        "CRM records",
+        "Owner roster",
+        "Decision"
+      ],
+      "background": "parchment",
+      "file": "visuals/fragmented-workflow.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "The current reconstruction gap. Concept preview."
+    },
+    {
+      "id": "missing-source",
+      "route": "/why-change",
+      "section": "Source gaps",
+      "kind": "empty",
+      "title": "What remains unknown",
+      "labels": [
+        "One source awaits verification.",
+        "Inferred joins remain distinct from observed writes."
+      ],
+      "background": "chalk",
+      "file": "visuals/missing-source.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "What remains unknown. Concept preview."
+    },
+    {
+      "id": "ownership-gap",
+      "route": "/why-change",
+      "section": "Handoff gap",
+      "kind": "owners",
+      "title": "Affected records need accountable owners",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/ownership-gap.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Affected records need accountable owners. Concept preview."
+    },
+    {
+      "id": "approval-boundary",
+      "route": "/",
+      "section": "Approval",
+      "kind": "approval",
+      "title": "Containment remains a human decision",
+      "labels": [],
+      "background": "apricot",
+      "file": "visuals/approval-boundary.svg",
+      "interaction": "Manual proposal inspection only; local approve/reject dialog in demo, never scroll authorization; cancel preserves state.",
+      "alt": "Containment remains a human decision. Concept preview."
+    },
+    {
+      "id": "shared-platform",
+      "route": "/",
+      "section": "Platform",
+      "kind": "topology",
+      "title": "Five views share one evidence model",
+      "labels": [],
+      "background": "slate-grid",
+      "file": "visuals/shared-platform.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Five views share one evidence model. Concept preview."
+    },
+    {
+      "id": "pilot-scorecard",
+      "route": "/",
+      "section": "Evaluation",
+      "kind": "empty",
+      "title": "Measure incremental value in a tabletop",
+      "labels": [
+        "Reconstruction time: not measured",
+        "Owner handoff quality: not measured",
+        "Authority errors: not measured"
+      ],
+      "background": "chalk",
+      "file": "visuals/pilot-scorecard.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Measure incremental value in a tabletop. Concept preview."
+    },
+    {
+      "id": "feedback-pending",
+      "route": "/",
+      "section": "Contributor feedback",
+      "kind": "empty",
+      "title": "Customer evidence is not available yet",
+      "labels": [
+        "Research questions: recurring pain, evidence gaps, authority.",
+        "Only approved attributable feedback may replace this state."
+      ],
+      "background": "chalk",
+      "file": "visuals/feedback-pending.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Customer evidence is not available yet. Concept preview."
+    },
+    {
+      "id": "commercial-entry",
+      "route": "/",
+      "section": "Pricing",
+      "kind": "pricing",
+      "title": "Start with a scoped tabletop",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/commercial-entry.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Start with a scoped tabletop. Concept preview."
+    },
+    {
+      "id": "home-faq",
+      "route": "/",
+      "section": "FAQ",
+      "kind": "checklist",
+      "title": "Questions worth resolving",
+      "labels": [
+        "What does the tabletop validate?",
+        "Which telemetry is approved?",
+        "Who may approve containment?",
+        "What stays synthetic?"
+      ],
+      "background": "chalk",
+      "file": "visuals/home-faq.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Questions worth resolving. Concept preview."
+    },
+    {
+      "id": "tabletop-journey",
+      "route": "/",
+      "section": "Final conversion",
+      "kind": "journey",
+      "title": "From inquiry to pilot decision",
+      "labels": [
+        "Scope",
+        "Redacted case",
+        "Tabletop",
+        "Readout",
+        "Decision"
+      ],
+      "background": "cacao",
+      "file": "visuals/tabletop-journey.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "From inquiry to pilot decision. Concept preview."
+    },
+    {
+      "id": "suite-overview",
+      "route": "/products",
+      "section": "Hero",
+      "kind": "topology",
+      "title": "A connected agent incident workflow",
+      "labels": [],
+      "background": "petrol-weave",
+      "file": "visuals/suite-overview.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "A connected agent incident workflow. Concept preview."
+    },
+    {
+      "id": "desk-hero",
+      "route": "/products/incident-desk",
+      "section": "Hero",
+      "kind": "desk",
+      "title": "TraceTriage Incident Desk",
+      "labels": [],
+      "background": "ruled",
+      "file": "visuals/desk-hero.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "TraceTriage Incident Desk. Concept preview."
+    },
+    {
+      "id": "desk-inputs",
+      "route": "/products/incident-desk",
+      "section": "Inputs",
+      "kind": "flow",
+      "title": "TraceTriage Incident Desk / evidence inputs",
+      "labels": [
+        "Trigger",
+        "Trace ID",
+        "Write batch",
+        "Source join"
+      ],
+      "background": "chalk",
+      "file": "visuals/desk-inputs.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "TraceTriage Incident Desk / evidence inputs. Concept preview."
+    },
+    {
+      "id": "desk-workflow",
+      "route": "/products/incident-desk",
+      "section": "Workflow",
+      "kind": "flow",
+      "title": "TraceTriage Incident Desk / inspect the workflow",
+      "labels": [
+        "Trigger",
+        "Correlate",
+        "Verify",
+        "Inspect"
+      ],
+      "background": "chalk",
+      "file": "visuals/desk-workflow.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "TraceTriage Incident Desk / inspect the workflow. Concept preview."
+    },
+    {
+      "id": "desk-output",
+      "route": "/products/incident-desk",
+      "section": "Output",
+      "kind": "table",
+      "title": "TraceTriage Incident Desk / defensible output",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/desk-output.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "TraceTriage Incident Desk / defensible output. Concept preview."
+    },
+    {
+      "id": "desk-controls",
+      "route": "/products/incident-desk",
+      "section": "Controls and limits",
+      "kind": "checklist",
+      "title": "TraceTriage Incident Desk / responsibilities",
+      "labels": [
+        "Inspect uncertainty",
+        "Retain the source references",
+        "Keep authority explicit",
+        "No production side effects"
+      ],
+      "background": "chalk",
+      "file": "visuals/desk-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "TraceTriage Incident Desk / responsibilities. Concept preview."
+    },
+    {
+      "id": "desk-related",
+      "route": "/products/incident-desk",
+      "section": "Related offers",
+      "kind": "journey",
+      "title": "TraceTriage Incident Desk / next useful view",
+      "labels": [
+        "Incident Desk",
+        "Incident Review",
+        "Incident Proof"
+      ],
+      "background": "chalk",
+      "file": "visuals/desk-related.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "TraceTriage Incident Desk / next useful view. Concept preview."
+    },
+    {
+      "id": "review-hero",
+      "route": "/products/incident-review",
+      "section": "Hero",
+      "kind": "owners",
+      "title": "Incident Review",
+      "labels": [],
+      "background": "slate-grid",
+      "file": "visuals/review-hero.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Incident Review. Concept preview."
+    },
+    {
+      "id": "review-inputs",
+      "route": "/products/incident-review",
+      "section": "Inputs",
+      "kind": "flow",
+      "title": "Incident Review / evidence inputs",
+      "labels": [
+        "Write batch",
+        "Account set",
+        "Owner roster",
+        "Unresolved"
+      ],
+      "background": "chalk",
+      "file": "visuals/review-inputs.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Incident Review / evidence inputs. Concept preview."
+    },
+    {
+      "id": "review-workflow",
+      "route": "/products/incident-review",
+      "section": "Workflow",
+      "kind": "scope",
+      "title": "Incident Review / inspect the workflow",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/review-workflow.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Incident Review / inspect the workflow. Concept preview."
+    },
+    {
+      "id": "review-output",
+      "route": "/products/incident-review",
+      "section": "Output",
+      "kind": "owners",
+      "title": "Incident Review / defensible output",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/review-output.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Incident Review / defensible output. Concept preview."
+    },
+    {
+      "id": "review-controls",
+      "route": "/products/incident-review",
+      "section": "Controls and limits",
+      "kind": "checklist",
+      "title": "Incident Review / responsibilities",
+      "labels": [
+        "Inspect uncertainty",
+        "Retain the source references",
+        "Keep authority explicit",
+        "No production side effects"
+      ],
+      "background": "chalk",
+      "file": "visuals/review-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Review / responsibilities. Concept preview."
+    },
+    {
+      "id": "review-related",
+      "route": "/products/incident-review",
+      "section": "Related offers",
+      "kind": "journey",
+      "title": "Incident Review / next useful view",
+      "labels": [
+        "Incident Review",
+        "Incident Signal",
+        "Incident Report"
+      ],
+      "background": "chalk",
+      "file": "visuals/review-related.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Review / next useful view. Concept preview."
+    },
+    {
+      "id": "proof-hero",
+      "route": "/products/incident-proof",
+      "section": "Hero",
+      "kind": "approval",
+      "title": "Incident Proof",
+      "labels": [],
+      "background": "apricot",
+      "file": "visuals/proof-hero.svg",
+      "interaction": "Manual proposal inspection only; local approve/reject dialog in demo, never scroll authorization; cancel preserves state.",
+      "alt": "Incident Proof. Concept preview."
+    },
+    {
+      "id": "proof-inputs",
+      "route": "/products/incident-proof",
+      "section": "Inputs",
+      "kind": "flow",
+      "title": "Incident Proof / evidence inputs",
+      "labels": [
+        "Scope",
+        "Prerequisites",
+        "Reviewer",
+        "Proposal"
+      ],
+      "background": "chalk",
+      "file": "visuals/proof-inputs.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Incident Proof / evidence inputs. Concept preview."
+    },
+    {
+      "id": "proof-workflow",
+      "route": "/products/incident-proof",
+      "section": "Workflow",
+      "kind": "matrix",
+      "title": "Incident Proof / inspect the workflow",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/proof-workflow.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Proof / inspect the workflow. Concept preview."
+    },
+    {
+      "id": "proof-output",
+      "route": "/products/incident-proof",
+      "section": "Output",
+      "kind": "approval",
+      "title": "Incident Proof / defensible output",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/proof-output.svg",
+      "interaction": "Manual proposal inspection only; local approve/reject dialog in demo, never scroll authorization; cancel preserves state.",
+      "alt": "Incident Proof / defensible output. Concept preview."
+    },
+    {
+      "id": "proof-controls",
+      "route": "/products/incident-proof",
+      "section": "Controls and limits",
+      "kind": "checklist",
+      "title": "Incident Proof / responsibilities",
+      "labels": [
+        "Inspect uncertainty",
+        "Retain the source references",
+        "Keep authority explicit",
+        "No production side effects"
+      ],
+      "background": "chalk",
+      "file": "visuals/proof-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Proof / responsibilities. Concept preview."
+    },
+    {
+      "id": "proof-related",
+      "route": "/products/incident-proof",
+      "section": "Related offers",
+      "kind": "journey",
+      "title": "Incident Proof / next useful view",
+      "labels": [
+        "Incident Proof",
+        "Incident Signal",
+        "Incident Report"
+      ],
+      "background": "chalk",
+      "file": "visuals/proof-related.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Proof / next useful view. Concept preview."
+    },
+    {
+      "id": "signal-hero",
+      "route": "/products/incident-signal",
+      "section": "Hero",
+      "kind": "timeline",
+      "title": "Incident Signal",
+      "labels": [],
+      "background": "parchment",
+      "file": "visuals/signal-hero.svg",
+      "interaction": "Manual source selection; fixed chronology; mobile list and complete reduced-motion rail.",
+      "alt": "Incident Signal. Concept preview."
+    },
+    {
+      "id": "signal-inputs",
+      "route": "/products/incident-signal",
+      "section": "Inputs",
+      "kind": "flow",
+      "title": "Incident Signal / evidence inputs",
+      "labels": [
+        "Event time",
+        "Ingest time",
+        "Source",
+        "Decision"
+      ],
+      "background": "chalk",
+      "file": "visuals/signal-inputs.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Incident Signal / evidence inputs. Concept preview."
+    },
+    {
+      "id": "signal-workflow",
+      "route": "/products/incident-signal",
+      "section": "Workflow",
+      "kind": "timeline",
+      "title": "Incident Signal / inspect the workflow",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/signal-workflow.svg",
+      "interaction": "Manual source selection; fixed chronology; mobile list and complete reduced-motion rail.",
+      "alt": "Incident Signal / inspect the workflow. Concept preview."
+    },
+    {
+      "id": "signal-output",
+      "route": "/products/incident-signal",
+      "section": "Output",
+      "kind": "table",
+      "title": "Incident Signal / defensible output",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/signal-output.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Incident Signal / defensible output. Concept preview."
+    },
+    {
+      "id": "signal-controls",
+      "route": "/products/incident-signal",
+      "section": "Controls and limits",
+      "kind": "checklist",
+      "title": "Incident Signal / responsibilities",
+      "labels": [
+        "Inspect uncertainty",
+        "Retain the source references",
+        "Keep authority explicit",
+        "No production side effects"
+      ],
+      "background": "chalk",
+      "file": "visuals/signal-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Signal / responsibilities. Concept preview."
+    },
+    {
+      "id": "signal-related",
+      "route": "/products/incident-signal",
+      "section": "Related offers",
+      "kind": "journey",
+      "title": "Incident Signal / next useful view",
+      "labels": [
+        "Incident Signal",
+        "Incident Report",
+        "Tabletop"
+      ],
+      "background": "chalk",
+      "file": "visuals/signal-related.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Signal / next useful view. Concept preview."
+    },
+    {
+      "id": "report-hero",
+      "route": "/products/incident-report",
+      "section": "Hero",
+      "kind": "export",
+      "title": "Incident Report",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/report-hero.svg",
+      "interaction": "Explicit synthetic preview/download; text-first fallback; no remote pipeline.",
+      "alt": "Incident Report. Concept preview."
+    },
+    {
+      "id": "report-inputs",
+      "route": "/products/incident-report",
+      "section": "Inputs",
+      "kind": "flow",
+      "title": "Incident Report / evidence inputs",
+      "labels": [
+        "Postmortem",
+        "Expectation",
+        "Evidence",
+        "Eval case"
+      ],
+      "background": "chalk",
+      "file": "visuals/report-inputs.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Incident Report / evidence inputs. Concept preview."
+    },
+    {
+      "id": "report-workflow",
+      "route": "/products/incident-report",
+      "section": "Workflow",
+      "kind": "export",
+      "title": "Incident Report / inspect the workflow",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/report-workflow.svg",
+      "interaction": "Explicit synthetic preview/download; text-first fallback; no remote pipeline.",
+      "alt": "Incident Report / inspect the workflow. Concept preview."
+    },
+    {
+      "id": "report-output",
+      "route": "/products/incident-report",
+      "section": "Output",
+      "kind": "checklist",
+      "title": "Incident Report / defensible output",
+      "labels": [
+        "Synthetic flag",
+        "Expected behavior",
+        "Evidence IDs",
+        "Unresolved questions"
+      ],
+      "background": "chalk",
+      "file": "visuals/report-output.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Report / defensible output. Concept preview."
+    },
+    {
+      "id": "report-controls",
+      "route": "/products/incident-report",
+      "section": "Controls and limits",
+      "kind": "checklist",
+      "title": "Incident Report / responsibilities",
+      "labels": [
+        "Inspect uncertainty",
+        "Retain the source references",
+        "Keep authority explicit",
+        "No production side effects"
+      ],
+      "background": "chalk",
+      "file": "visuals/report-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Report / responsibilities. Concept preview."
+    },
+    {
+      "id": "report-related",
+      "route": "/products/incident-report",
+      "section": "Related offers",
+      "kind": "journey",
+      "title": "Incident Report / next useful view",
+      "labels": [
+        "Incident Report",
+        "Tabletop",
+        "Pilot readout"
+      ],
+      "background": "chalk",
+      "file": "visuals/report-related.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident Report / next useful view. Concept preview."
+    },
+    {
+      "id": "platform-architecture",
+      "route": "/platform",
+      "section": "Hero",
+      "kind": "topology",
+      "title": "Shared evidence architecture",
+      "labels": [],
+      "background": "slate-grid",
+      "file": "visuals/platform-architecture.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Shared evidence architecture. Concept preview."
+    },
+    {
+      "id": "platform-data-flow",
+      "route": "/platform",
+      "section": "Data model",
+      "kind": "flow",
+      "title": "Identifiers join records, not assumptions",
+      "labels": [
+        "Trace ID",
+        "Write batch",
+        "Account ID",
+        "Source ID",
+        "Decision ID"
+      ],
+      "background": "chalk",
+      "file": "visuals/platform-data-flow.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Identifiers join records, not assumptions. Concept preview."
+    },
+    {
+      "id": "platform-authority",
+      "route": "/platform",
+      "section": "Authority",
+      "kind": "matrix",
+      "title": "Proposed responsibility boundaries",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/platform-authority.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Proposed responsibility boundaries. Concept preview."
+    },
+    {
+      "id": "platform-isolation",
+      "route": "/platform",
+      "section": "Isolation",
+      "kind": "flow",
+      "title": "Synthetic demo and real leads stay separate",
+      "labels": [
+        "Demo fixtures",
+        "Local state",
+        "Synthetic export",
+        "No real writes"
+      ],
+      "background": "chalk",
+      "file": "visuals/platform-isolation.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Synthetic demo and real leads stay separate. Concept preview."
+    },
+    {
+      "id": "solutions-routing",
+      "route": "/solutions",
+      "section": "Hero",
+      "kind": "journey",
+      "title": "Find the incident job that needs attention",
+      "labels": [
+        "On-call SRE",
+        "Incident owner",
+        "Platform engineer"
+      ],
+      "background": "chalk",
+      "file": "visuals/solutions-routing.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Find the incident job that needs attention. Concept preview."
+    },
+    {
+      "id": "sre-on-call-hero",
+      "route": "/solutions/sre-on-call",
+      "section": "Hero",
+      "kind": "desk",
+      "title": "SRE / on-call / agent incidents",
+      "labels": [],
+      "background": "parchment",
+      "file": "visuals/sre-on-call-hero.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "SRE / on-call / agent incidents. Concept preview."
+    },
+    {
+      "id": "sre-on-call-handoff",
+      "route": "/solutions/sre-on-call",
+      "section": "Workflow",
+      "kind": "journey",
+      "title": "SRE / on-call / accountable handoff",
+      "labels": [
+        "Inspect",
+        "Assign",
+        "Review",
+        "Preserve"
+      ],
+      "background": "chalk",
+      "file": "visuals/sre-on-call-handoff.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "SRE / on-call / accountable handoff. Concept preview."
+    },
+    {
+      "id": "sre-on-call-evaluation",
+      "route": "/solutions/sre-on-call",
+      "section": "Evaluation",
+      "kind": "empty",
+      "title": "SRE / on-call / pilot scorecard",
+      "labels": [
+        "Baseline: not measured",
+        "Incremental benefit: not measured",
+        "Paid sponsorship: not established"
+      ],
+      "background": "chalk",
+      "file": "visuals/sre-on-call-evaluation.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "SRE / on-call / pilot scorecard. Concept preview."
+    },
+    {
+      "id": "incident-management-hero",
+      "route": "/solutions/incident-management",
+      "section": "Hero",
+      "kind": "matrix",
+      "title": "Incident owner / agent incidents",
+      "labels": [],
+      "background": "parchment",
+      "file": "visuals/incident-management-hero.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident owner / agent incidents. Concept preview."
+    },
+    {
+      "id": "incident-management-handoff",
+      "route": "/solutions/incident-management",
+      "section": "Workflow",
+      "kind": "journey",
+      "title": "Incident owner / accountable handoff",
+      "labels": [
+        "Inspect",
+        "Assign",
+        "Review",
+        "Preserve"
+      ],
+      "background": "chalk",
+      "file": "visuals/incident-management-handoff.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident owner / accountable handoff. Concept preview."
+    },
+    {
+      "id": "incident-management-evaluation",
+      "route": "/solutions/incident-management",
+      "section": "Evaluation",
+      "kind": "empty",
+      "title": "Incident owner / pilot scorecard",
+      "labels": [
+        "Baseline: not measured",
+        "Incremental benefit: not measured",
+        "Paid sponsorship: not established"
+      ],
+      "background": "chalk",
+      "file": "visuals/incident-management-evaluation.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Incident owner / pilot scorecard. Concept preview."
+    },
+    {
+      "id": "platform-engineering-hero",
+      "route": "/solutions/platform-engineering",
+      "section": "Hero",
+      "kind": "topology",
+      "title": "Platform engineer / agent incidents",
+      "labels": [],
+      "background": "parchment",
+      "file": "visuals/platform-engineering-hero.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Platform engineer / agent incidents. Concept preview."
+    },
+    {
+      "id": "platform-engineering-handoff",
+      "route": "/solutions/platform-engineering",
+      "section": "Workflow",
+      "kind": "journey",
+      "title": "Platform engineer / accountable handoff",
+      "labels": [
+        "Inspect",
+        "Assign",
+        "Review",
+        "Preserve"
+      ],
+      "background": "chalk",
+      "file": "visuals/platform-engineering-handoff.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Platform engineer / accountable handoff. Concept preview."
+    },
+    {
+      "id": "platform-engineering-evaluation",
+      "route": "/solutions/platform-engineering",
+      "section": "Evaluation",
+      "kind": "empty",
+      "title": "Platform engineer / pilot scorecard",
+      "labels": [
+        "Baseline: not measured",
+        "Incremental benefit: not measured",
+        "Paid sponsorship: not established"
+      ],
+      "background": "chalk",
+      "file": "visuals/platform-engineering-evaluation.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Platform engineer / pilot scorecard. Concept preview."
+    },
+    {
+      "id": "results-method",
+      "route": "/results",
+      "section": "Hero",
+      "kind": "checklist",
+      "title": "Validate before claiming results",
+      "labels": [
+        "Agree a redacted historical case",
+        "Record existing-stack baseline",
+        "Define buyer-specific thresholds",
+        "Compare supported measurements"
+      ],
+      "background": "chalk",
+      "file": "visuals/results-method.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Validate before claiming results. Concept preview."
+    },
+    {
+      "id": "results-measures",
+      "route": "/results",
+      "section": "Measures",
+      "kind": "empty",
+      "title": "Pilot measurements are not yet available",
+      "labels": [
+        "Reconstruction time, handoff time, evidence gaps",
+        "No invented savings, percentages or testimonials"
+      ],
+      "background": "chalk",
+      "file": "visuals/results-measures.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Pilot measurements are not yet available. Concept preview."
+    },
+    {
+      "id": "results-go-no-go",
+      "route": "/results",
+      "section": "Readout",
+      "kind": "journey",
+      "title": "A pilot decision needs evidence",
+      "labels": [
+        "Sponsor",
+        "Access",
+        "Authority",
+        "Commitment",
+        "Benefit"
+      ],
+      "background": "chalk",
+      "file": "visuals/results-go-no-go.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "A pilot decision needs evidence. Concept preview."
+    },
+    {
+      "id": "pricing-hypotheses",
+      "route": "/pricing",
+      "section": "Hero",
+      "kind": "pricing",
+      "title": "Commercial hypotheses, clearly labeled",
+      "labels": [],
+      "background": "apricot",
+      "file": "visuals/pricing-hypotheses.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Commercial hypotheses, clearly labeled. Concept preview."
+    },
+    {
+      "id": "pricing-scope",
+      "route": "/pricing",
+      "section": "Scope",
+      "kind": "checklist",
+      "title": "Scope the agent group before pricing",
+      "labels": [
+        "Named incident owner",
+        "Approved telemetry",
+        "Specific action taxonomy",
+        "Bounded authority",
+        "Success thresholds"
+      ],
+      "background": "chalk",
+      "file": "visuals/pricing-scope.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Scope the agent group before pricing. Concept preview."
+    },
+    {
+      "id": "pricing-questions",
+      "route": "/pricing",
+      "section": "FAQ",
+      "kind": "checklist",
+      "title": "Resolve the commercial questions",
+      "labels": [
+        "What is an incident-managed agent group?",
+        "What does the tabletop include?",
+        "What determines a pilot decision?"
+      ],
+      "background": "chalk",
+      "file": "visuals/pricing-questions.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Resolve the commercial questions. Concept preview."
+    },
+    {
+      "id": "intake-flow",
+      "route": "/request-demo",
+      "section": "Hero",
+      "kind": "journey",
+      "title": "Request an agent incident tabletop",
+      "labels": [
+        "Choose offer",
+        "Describe stack",
+        "Confirm scope",
+        "Request follow-up"
+      ],
+      "background": "chalk",
+      "file": "visuals/intake-flow.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Request an agent incident tabletop. Concept preview."
+    },
+    {
+      "id": "intake-privacy",
+      "route": "/request-demo",
+      "section": "Consent",
+      "kind": "checklist",
+      "title": "Share minimum context",
+      "labels": [
+        "Work contact and role",
+        "No logs, secrets or customer records",
+        "Optional interview opt-in",
+        "Honest submission status"
+      ],
+      "background": "chalk",
+      "file": "visuals/intake-privacy.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Share minimum context. Concept preview."
+    },
+    {
+      "id": "signin-boundary",
+      "route": "/sign-in",
+      "section": "Access",
+      "kind": "flow",
+      "title": "Concept access, with clear boundaries",
+      "labels": [
+        "Select demo role",
+        "Enter synthetic demo",
+        "Reset local state",
+        "Exit"
+      ],
+      "background": "chalk",
+      "file": "visuals/signin-boundary.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Concept access, with clear boundaries. Concept preview."
+    },
+    {
+      "id": "about-principles",
+      "route": "/about",
+      "section": "Principles",
+      "kind": "principles",
+      "title": "A more accountable agent workflow",
+      "labels": [
+        "Trace consequences",
+        "Expose uncertainty",
+        "Name the owner",
+        "Keep judgment human"
+      ],
+      "background": "cacao",
+      "file": "visuals/about-principles.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "A more accountable agent workflow. Concept preview."
+    },
+    {
+      "id": "about-method",
+      "route": "/about",
+      "section": "Approach",
+      "kind": "journey",
+      "title": "Investigate, test and document",
+      "labels": [
+        "Research",
+        "Synthetic case",
+        "Tabletop",
+        "Readout"
+      ],
+      "background": "chalk",
+      "file": "visuals/about-method.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Investigate, test and document. Concept preview."
+    },
+    {
+      "id": "contact-options",
+      "route": "/contact",
+      "section": "Contact",
+      "kind": "journey",
+      "title": "Choose a relevant conversation",
+      "labels": [
+        "Pilot scope",
+        "Product question",
+        "Privacy inquiry"
+      ],
+      "background": "chalk",
+      "file": "visuals/contact-options.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Choose a relevant conversation. Concept preview."
+    },
+    {
+      "id": "contact-boundary",
+      "route": "/contact",
+      "section": "Form",
+      "kind": "checklist",
+      "title": "A useful inquiry needs little data",
+      "labels": [
+        "Name and work contact",
+        "Topic and short description",
+        "No sensitive uploads",
+        "Truthful receipt state"
+      ],
+      "background": "chalk",
+      "file": "visuals/contact-boundary.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "A useful inquiry needs little data. Concept preview."
+    },
+    {
+      "id": "trust-controls",
+      "route": "/trust",
+      "section": "Hero",
+      "kind": "matrix",
+      "title": "Authority is a design boundary",
+      "labels": [],
+      "background": "slate-grid",
+      "file": "visuals/trust-controls.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Authority is a design boundary. Concept preview."
+    },
+    {
+      "id": "trust-data",
+      "route": "/trust",
+      "section": "Data handling",
+      "kind": "flow",
+      "title": "Minimize and separate the data",
+      "labels": [
+        "Redacted inputs",
+        "Local demo",
+        "Real lead consent",
+        "Deletion route"
+      ],
+      "background": "chalk",
+      "file": "visuals/trust-data.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Minimize and separate the data. Concept preview."
+    },
+    {
+      "id": "trust-status",
+      "route": "/trust",
+      "section": "Claims",
+      "kind": "empty",
+      "title": "Security and deployment status",
+      "labels": [
+        "No certifications or production deployments claimed",
+        "Controller, processors and retention need supplied facts"
+      ],
+      "background": "chalk",
+      "file": "visuals/trust-status.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Security and deployment status. Concept preview."
+    },
+    {
+      "id": "integrations-map",
+      "route": "/integrations",
+      "section": "Hero",
+      "kind": "topology",
+      "title": "Proposed evidence sources",
+      "labels": [
+        "Trace source",
+        "Tool log",
+        "CRM event",
+        "Owner roster",
+        "Incident record"
+      ],
+      "background": "slate-grid",
+      "file": "visuals/integrations-map.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Proposed evidence sources. Concept preview."
+    },
+    {
+      "id": "integrations-status",
+      "route": "/integrations",
+      "section": "Connector status",
+      "kind": "checklist",
+      "title": "Proposed or simulated, never assumed live",
+      "labels": [
+        "Telemetry: proposed mapping",
+        "CRM writes: synthetic fixture",
+        "Paging: nothing sent",
+        "Pause / rollback: not connected"
+      ],
+      "background": "chalk",
+      "file": "visuals/integrations-status.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Proposed or simulated, never assumed live. Concept preview."
+    },
+    {
+      "id": "resource-index",
+      "route": "/resources",
+      "section": "Hero",
+      "kind": "checklist",
+      "title": "Practical incident resources",
+      "labels": [
+        "Incident reconstruction checklist",
+        "Agent incident tabletop guide"
+      ],
+      "background": "chalk",
+      "file": "visuals/resource-index.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Practical incident resources. Concept preview."
+    },
+    {
+      "id": "reconstruction-checklist",
+      "route": "/resources/incident-reconstruction-checklist",
+      "section": "Guide",
+      "kind": "checklist",
+      "title": "Before reconstructing an agent write",
+      "labels": [
+        "Trace and write identifiers",
+        "Downstream record references",
+        "Source certainty",
+        "Owner and authority",
+        "Expected behavior"
+      ],
+      "background": "chalk",
+      "file": "visuals/reconstruction-checklist.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Before reconstructing an agent write. Concept preview."
+    },
+    {
+      "id": "resource-source-map",
+      "route": "/resources/incident-reconstruction-checklist",
+      "section": "Figure",
+      "kind": "flow",
+      "title": "Keep source and inference separate",
+      "labels": [
+        "Source record",
+        "Observed fact",
+        "Inferred link",
+        "Open question"
+      ],
+      "background": "chalk",
+      "file": "visuals/resource-source-map.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "Keep source and inference separate. Concept preview."
+    },
+    {
+      "id": "tabletop-guide",
+      "route": "/resources/tabletop-guide",
+      "section": "Guide",
+      "kind": "journey",
+      "title": "A scoped tabletop exercise",
+      "labels": [
+        "Prepare",
+        "Reconstruct",
+        "Review",
+        "Measure",
+        "Read out"
+      ],
+      "background": "chalk",
+      "file": "visuals/tabletop-guide.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "A scoped tabletop exercise. Concept preview."
+    },
+    {
+      "id": "tabletop-readout",
+      "route": "/resources/tabletop-guide",
+      "section": "Figure",
+      "kind": "empty",
+      "title": "Do not turn unknown into zero",
+      "labels": [
+        "Record confounders and remaining questions",
+        "Measure against the agreed baseline"
+      ],
+      "background": "chalk",
+      "file": "visuals/tabletop-readout.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Do not turn unknown into zero. Concept preview."
+    },
+    {
+      "id": "privacy-data-map",
+      "route": "/legal/privacy",
+      "section": "Notice",
+      "kind": "legal",
+      "title": "Draft privacy information structure",
+      "labels": [
+        "Operator and contact: required",
+        "Purpose and fields: required",
+        "Processors and retention: required",
+        "Consent and deletion route: required"
+      ],
+      "background": "chalk",
+      "file": "visuals/privacy-data-map.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Draft privacy information structure. Concept preview."
+    },
+    {
+      "id": "terms-boundary",
+      "route": "/legal/terms",
+      "section": "Notice",
+      "kind": "legal",
+      "title": "Draft concept-use terms structure",
+      "labels": [
+        "Research concept boundaries",
+        "Synthetic demonstration limitations",
+        "No operational reliance or real execution",
+        "Operator and governing details: required"
+      ],
+      "background": "chalk",
+      "file": "visuals/terms-boundary.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Draft concept-use terms structure. Concept preview."
+    },
+    {
+      "id": "404-recovery",
+      "route": "/404",
+      "section": "Recovery",
+      "kind": "journey",
+      "title": "This trace ends here",
+      "labels": [
+        "Home",
+        "Products",
+        "Resources",
+        "Contact"
+      ],
+      "background": "cacao",
+      "file": "visuals/404-recovery.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "This trace ends here. Concept preview."
+    },
+    {
+      "id": "demo-intro",
+      "route": "/demo",
+      "section": "Introduction",
+      "kind": "flow",
+      "title": "One synthetic write, end to end",
+      "labels": [
+        "TR-27",
+        "WB-3",
+        "12 accounts",
+        "Approval",
+        "Eval export"
+      ],
+      "background": "chalk",
+      "file": "visuals/demo-intro.svg",
+      "interaction": "Scroll/focus highlights a source path; up-scroll reverses highlight only. Stacked labeled steps on mobile; complete still for reduced motion.",
+      "alt": "One synthetic write, end to end. Concept preview."
+    },
+    {
+      "id": "demo-queue",
+      "route": "/demo/incidents",
+      "section": "Queue",
+      "kind": "desk",
+      "title": "Ten synthetic incidents; inspect INC-027",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-queue.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "Ten synthetic incidents; inspect INC-027. Concept preview."
+    },
+    {
+      "id": "demo-summary",
+      "route": "/demo/incidents/INC-027",
+      "section": "Incident",
+      "kind": "desk",
+      "title": "INC-027 / support-agent-01",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-summary.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "INC-027 / support-agent-01. Concept preview."
+    },
+    {
+      "id": "demo-timeline",
+      "route": "/demo/incidents/INC-027/timeline",
+      "section": "Timeline",
+      "kind": "timeline",
+      "title": "Traceable synthetic chronology",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-timeline.svg",
+      "interaction": "Manual source selection; fixed chronology; mobile list and complete reduced-motion rail.",
+      "alt": "Traceable synthetic chronology. Concept preview."
+    },
+    {
+      "id": "demo-impact",
+      "route": "/demo/incidents/INC-027/impact",
+      "section": "Scope",
+      "kind": "scope",
+      "title": "Twelve accounts in scope",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-impact.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "Twelve accounts in scope. Concept preview."
+    },
+    {
+      "id": "demo-record",
+      "route": "/demo/incidents/INC-027/impact/ACC-001",
+      "section": "Record",
+      "kind": "table",
+      "title": "ACC-001 / source reconciliation",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-record.svg",
+      "interaction": "Explicit selection highlights/filters evidence; keyboard and touch controls; text summary and record-list fallback; no random counts.",
+      "alt": "ACC-001 / source reconciliation. Concept preview."
+    },
+    {
+      "id": "demo-approval",
+      "route": "/demo/incidents/INC-027/approval",
+      "section": "Approval",
+      "kind": "approval",
+      "title": "Deliberate mock authorization",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-approval.svg",
+      "interaction": "Manual proposal inspection only; local approve/reject dialog in demo, never scroll authorization; cancel preserves state.",
+      "alt": "Deliberate mock authorization. Concept preview."
+    },
+    {
+      "id": "demo-report",
+      "route": "/demo/incidents/INC-027/report",
+      "section": "Export",
+      "kind": "export",
+      "title": "Synthetic postmortem to evaluation",
+      "labels": [],
+      "background": "chalk",
+      "file": "visuals/demo-report.svg",
+      "interaction": "Explicit synthetic preview/download; text-first fallback; no remote pipeline.",
+      "alt": "Synthetic postmortem to evaluation. Concept preview."
+    },
+    {
+      "id": "demo-dictionary",
+      "route": "/demo/data-dictionary",
+      "section": "Dictionary",
+      "kind": "checklist",
+      "title": "The fixture vocabulary",
+      "labels": [
+        "INC-027: selected incident",
+        "TR-27: trace / WB-3: write batch",
+        "ACC-001\u2026012: accounts / A-001\u2026012: display",
+        "8 observed / 3 inferred / 1 awaiting"
+      ],
+      "background": "chalk",
+      "file": "visuals/demo-dictionary.svg",
+      "interaction": "Reveal once or explicit disclosure; no automatic decisions; fully visible static mobile/reduced-motion content.",
+      "alt": "The fixture vocabulary. Concept preview."
+    }
+  ],
+  "generated_imagery": [
+    {
+      "file": "imagery/hero-horizon.png",
+      "role": "Home cinematic hero",
+      "dimensions": [
+        1619,
+        971
+      ],
+      "status": "generated conceptual scene; not real company property",
+      "variants": [
+        "imagery/hero-horizon-1600.webp",
+        "imagery/hero-horizon-800.webp"
+      ]
+    },
+    {
+      "file": "imagery/problem-ledger-gap.png",
+      "role": "Problem evidence-gap illustration",
+      "dimensions": [
+        1604,
+        980
+      ],
+      "status": "generated conceptual scene; not real company property",
+      "variants": [
+        "imagery/problem-ledger-gap-1600.webp",
+        "imagery/problem-ledger-gap-800.webp"
+      ]
+    },
+    {
+      "file": "imagery/material-copper-archive.png",
+      "role": "Company/resources editorial material detail",
+      "dimensions": [
+        1605,
+        980
+      ],
+      "status": "generated conceptual scene; not real company property",
+      "variants": [
+        "imagery/material-copper-archive-1600.webp",
+        "imagery/material-copper-archive-800.webp"
+      ]
+    }
+  ],
+  "sources": [
+    "Selected option 3",
+    "Screenshot 2026-10-09 at 22.09.49.png",
+    "Screenshot 2026-10-09 at 22.09.53.png"
+  ],
+  "social_profiles": {
+    "linkedin": null,
+    "crunchbase": null
+  },
+  "scope": "Brand kit; no website or production agent functionality.",
+  "backgrounds": [
+    "imagery/background-apricot-decision.svg",
+    "imagery/background-cacao-close.svg",
+    "imagery/background-chalk-grain.svg",
+    "imagery/background-ledger-rules.svg",
+    "imagery/background-petrol-weave.svg",
+    "imagery/background-slate-grid.svg"
+  ],
+  "reference_gallery": "REFERENCE-GALLERY.html",
+  "brand_board": "BRAND-BOARD.png",
+  "brand_application": {
+    "file": "BRAND-APPLICATION.png",
+    "status": "generated visual study; native SVG logo, tokens and fixture are authoritative",
+    "note": "Applied selected option3 with screenshot mechanism, coverage chart, evidence table and five distinct motifs."
+  },
+  "selectedLogo": {
+    "direction": "04 Ledger Signature \u2014 ORIGINAL approved shapes",
+    "specification": "LOGO-REFINEMENT.md",
+    "master": "logo/lockup-horizontal-primary.svg",
+    "origin": "Direct contour conversion of approved image; no substitute font",
+    "rejected": "Newsreader reinterpretation"
+  }
+}

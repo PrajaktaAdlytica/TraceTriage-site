@@ -1,0 +1,154 @@
+{
+  "synthetic": true,
+  "concept_preview": true,
+  "scenario": "Oakridge Services",
+  "date": "2026-10-09",
+  "timezone": "UTC",
+  "incident_id": "INC-027",
+  "agent_id": "support-agent-01",
+  "queue_count": 10,
+  "accounts": [
+    {
+      "id": "ACC-001",
+      "display_id": "A-001",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0001",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-002",
+      "display_id": "A-002",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0002",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-003",
+      "display_id": "A-003",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0003",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-004",
+      "display_id": "A-004",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0004",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-005",
+      "display_id": "A-005",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0005",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-006",
+      "display_id": "A-006",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0006",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-007",
+      "display_id": "A-007",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0007",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-008",
+      "display_id": "A-008",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "observed",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": "evt-0008",
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-009",
+      "display_id": "A-009",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "inferred",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": null,
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-010",
+      "display_id": "A-010",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "inferred",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": null,
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-011",
+      "display_id": "A-011",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "inferred",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": null,
+      "owner": "Maya Chen (fictional)"
+    },
+    {
+      "id": "ACC-012",
+      "display_id": "A-012",
+      "original_tier": "Standard",
+      "scenario_written_tier": "Enterprise",
+      "evidence_status": "awaiting",
+      "trace_id": "TR-27",
+      "write_batch_id": "WB-3",
+      "source_id": null,
+      "owner": null
+    }
+  ],
+  "approval_state": "awaiting_mock_approval",
+  "coverage": {
+    "observed": 8,
+    "inferred": 3,
+    "awaiting": 1
+  },
+  "commercial_hypotheses": {
+    "tabletop_usd": 4000,
+    "monthly_per_incident_managed_agent_group_usd": 2200
+  }
+}

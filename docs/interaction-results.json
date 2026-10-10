@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "name": "Desktop product menu opens",
+      "pass": true
+    },
+    {
+      "name": "Escape closes menu and restores trigger",
+      "pass": true
+    },
+    {
+      "name": "Pinned chapter navigation follows scroll",
+      "pass": true
+    },
+    {
+      "name": "Skip story reaches next content",
+      "pass": true
+    },
+    {
+      "name": "All twelve records render",
+      "pass": true
+    },
+    {
+      "name": "Awaiting filter has one unverified record",
+      "pass": true
+    },
+    {
+      "name": "Record drilldown preserves missing source",
+      "pass": true
+    },
+    {
+      "name": "Timeline source expands",
+      "pass": true
+    },
+    {
+      "name": "Review dialog opens",
+      "pass": true
+    },
+    {
+      "name": "Escape cancels and restores focus",
+      "pass": true
+    },
+    {
+      "name": "Explicit local decision recorded",
+      "pass": true
+    },
+    {
+      "name": "Report export includes 12 accounts and local rationale",
+      "pass": true
+    },
+    {
+      "name": "Local decision clears on reload",
+      "pass": true
+    },
+    {
+      "name": "Form prepares honestly without transmission",
+      "pass": true
+    },
+    {
+      "name": "Inquiry download includes supplied fields",
+      "pass": true
+    },
+    {
+      "name": "Editing retains draft",
+      "pass": true
+    },
+    {
+      "name": "Pricing estimate updates",
+      "pass": true
+    },
+    {
+      "name": "Source field mapping changes",
+      "pass": true
+    },
+    {
+      "name": "Correct guide exports",
+      "pass": true
+    },
+    {
+      "name": "Motion toggle removes pin",
+      "pass": true
+    },
+    {
+      "name": "Mobile navigation opens",
+      "pass": true
+    },
+    {
+      "name": "Mobile menu Escape restores focus",
+      "pass": true
+    },
+    {
+      "name": "Mobile route selection closes menu",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion has native story and visible content",
+      "pass": true
+    },
+    {
+      "name": "No runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

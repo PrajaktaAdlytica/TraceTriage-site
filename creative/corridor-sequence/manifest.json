@@ -1,0 +1,36 @@
+{
+  "generator": "Built-in image generation tool",
+  "reference": "REFERENCE.png",
+  "frames": [
+    {
+      "file": "frames/01-wide-corridor.png",
+      "title": "01 / Wide corridor",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2157372
+    },
+    {
+      "file": "frames/02-forward-through-corridor.png",
+      "title": "02 / Forward through the corridor",
+      "width": 1672,
+      "height": 940,
+      "bytes": 2254498
+    },
+    {
+      "file": "frames/03-window-approach.png",
+      "title": "03 / Window approach",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2339131
+    },
+    {
+      "file": "frames/04-forest-mountain-focus.png",
+      "title": "04 / Forest and mountain focus",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2706033
+    }
+  ],
+  "upscaled": false,
+  "sequence": "01 \u2192 02 \u2192 03 \u2192 04"
+}

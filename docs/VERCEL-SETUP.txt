@@ -1,0 +1,19 @@
+TraceTriage — manual Vercel setup
+
+1. Sign in to Vercel with the GitHub account that can access PrajaktaAdlytica/TraceTriage-site.
+2. Select Add New > Project, then import TraceTriage-site. If missing, configure the Vercel GitHub app to allow this repository.
+3. Select main as the production branch. Keep Root Directory at ./ (repository root).
+4. Framework Preset: Vite. Install Command: npm ci. Build Command: npm run build. Output Directory: dist. Choose Node.js 22.x in project settings if offered; Vite requires 22.12+ on that major.
+5. Click Deploy. No API keys are required for the current frontend.
+6. After the project URL is known, add SITE_URL=https://your-project.vercel.app under Settings > Environment Variables for Production, then redeploy. Use the final custom-domain origin instead when connected. SITE_URL sets canonical links, social image URLs and sitemap entries. Do not include a path or trailing slash.
+7. Visit homepage, /products, /platform, /demo, /request-demo and /sign-in directly. Verify intro playback and reload a nested incident route. Test a nonexistent URL for the branded 404.
+8. Optional custom domain: Settings > Domains > Add Domain. Add only the DNS records Vercel displays at your registrar; wait for verification and HTTPS. Update SITE_URL and redeploy after switching the production domain.
+
+vercel.json is included. Do not add a catch-all SPA rewrite: the build prerenders 47 routes and supplies clean URL HTML files.
+Future pushes to main will trigger production builds through the GitHub integration.
+
+Service boundaries: forms prepare local downloads and do not send leads; workspace authentication is not connected; the incident walkthrough uses synthetic data; LinkedIn/Crunchbase URLs still need approval. Connect these services and approve legal operator details before a commercial launch.
+
+Official documentation:
+https://vercel.com/docs/frameworks/frontend/vite
+https://vercel.com/docs/git/vercel-for-github

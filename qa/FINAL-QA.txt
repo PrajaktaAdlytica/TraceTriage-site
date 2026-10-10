@@ -1,0 +1,17 @@
+TraceTriage publication QA — 10 October 2026
+
+PASS: clean npm ci and production build; 47 prerendered routes.
+PASS: npm audit found 0 vulnerabilities.
+PASS: static release audit — route titles/descriptions, one main H1, local links, anchors and asset targets. Report: static-audit.json.
+FIXED: prerender metadata replacement now matches multiline HTML description tags; route descriptions no longer inherit the homepage description.
+PASS: browser layout checks across all 47 routes at 1440x900 and 390x844 (94 observations), with no horizontal overflow or broken loaded images. Report: browser-layout-audit.json.
+PASS: local intro video playback (8 seconds) and automatic hero handoff; intro remains in document.
+PASS: mobile navigation opening and Escape closing.
+PASS: inquiry form preparation with fictional data and confirmation that nothing was sent.
+PASS: evidence filter, local simulated approval with rationale and report download parsed as valid JSON.
+
+Scope: layout/route checks cover all routes; functional tests cover representative flows. Earlier accessibility reports in docs are historical; a fresh automated accessibility audit was not run in this publication pass. Hosting/domain QA must be repeated after Vercel deployment.
+
+Known boundaries: three RV intro font files are intentionally unavailable under the supplied exact template; its specified fallback stacks are retained. Local Newsreader and Manrope website fonts are included. Inquiry transmission, real authentication and production incident execution are not implemented. Social profile URLs and final legal operator details are not supplied. Pricing and walkthrough records retain their stated hypothesis/synthetic boundaries.
+
+Included: website source, approved brand kit, fonts/licenses, favicon and social assets, imagery, local intro video, storyboard/Flow prompts, Vercel configuration and manual setup guide. Rejected logo drafts, node_modules, dist and duplicate ZIP archives are excluded from version control.

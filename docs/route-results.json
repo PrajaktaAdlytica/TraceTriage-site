@@ -1,0 +1,326 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "title": "Know what changed. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/why-change",
+      "title": "When the trace ends, the incident doesn’t. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products",
+      "title": "Five views. One accountable response. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/platform",
+      "title": "Original context. Accountable outcomes. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/solutions",
+      "title": "Built around the person on call. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/results",
+      "title": "Evidence before outcomes. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/pricing",
+      "title": "Start with one scoped incident. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/request-demo",
+      "title": "Request a tabletop. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/sign-in",
+      "title": "Workspace access. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "title": "A more accountable agent workflow. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "title": "Start a useful conversation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/trust",
+      "title": "Authority is a design boundary. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/integrations",
+      "title": "Keep your context. Connect the evidence. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/resources",
+      "title": "A field guide to agent incidents. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/resources/incident-reconstruction-checklist",
+      "title": "Reconstruct the write. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/resources/tabletop-guide",
+      "title": "Run a useful tabletop. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/legal/privacy",
+      "title": "Privacy & data handling. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/legal/terms",
+      "title": "Website use. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "title": "This trace ends here. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo",
+      "title": "Follow one incident. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents",
+      "title": "Incident desk. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027",
+      "title": "Oakridge Services · INC-027 | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/timeline",
+      "title": "Incident timeline. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact",
+      "title": "Impact & ownership. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-001",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/approval",
+      "title": "Review the proposal. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/report",
+      "title": "Postmortem & evaluation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/data-dictionary",
+      "title": "The evidence vocabulary. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-desk",
+      "title": "TraceTriage Incident Desk — Correlate the trace. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-review",
+      "title": "Incident Review — Map impact and ownership. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-proof",
+      "title": "Incident Proof — Prepare a human decision. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-signal",
+      "title": "Incident Signal — Preserve the evidence timeline. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-report",
+      "title": "Incident Report — Turn incidents into learning. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/solutions/sre-on-call",
+      "title": "SRE & on-call — TraceTriage | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/solutions/incident-management",
+      "title": "Incident owners — TraceTriage | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/solutions/platform-engineering",
+      "title": "Platform engineering — TraceTriage | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-002",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-003",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-004",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-005",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-006",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-007",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-008",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-009",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-010",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-011",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact/ACC-012",
+      "title": "Account reconciliation. | TraceTriage",
+      "h1": 1,
+      "overflow": false
+    }
+  ],
+  "mobile": [
+    {
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "route": "/products/incident-review",
+      "overflow": false
+    },
+    {
+      "route": "/platform",
+      "overflow": false
+    },
+    {
+      "route": "/pricing",
+      "overflow": false
+    },
+    {
+      "route": "/request-demo",
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/impact",
+      "overflow": false
+    },
+    {
+      "route": "/demo/incidents/INC-027/approval",
+      "overflow": false
+    },
+    {
+      "route": "/resources/tabletop-guide",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "missing": []
+}

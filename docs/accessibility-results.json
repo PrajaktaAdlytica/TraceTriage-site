@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/",
+    "violations": []
+  },
+  {
+    "route": "/products/incident-review",
+    "violations": []
+  },
+  {
+    "route": "/pricing",
+    "violations": []
+  },
+  {
+    "route": "/request-demo",
+    "violations": []
+  },
+  {
+    "route": "/resources/tabletop-guide",
+    "violations": []
+  },
+  {
+    "route": "/demo/incidents/INC-027/impact",
+    "violations": []
+  },
+  {
+    "route": "/demo/incidents/INC-027/approval",
+    "violations": []
+  },
+  {
+    "route": "/about",
+    "violations": []
+  }
+]

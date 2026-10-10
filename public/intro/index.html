@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#03080B" />
+    <title>TraceTriage — Know what changed. Stay in control.</title>
+    <style>
+      @font-face {
+        font-family: "RV Display";
+        font-weight: 300;
+        src: url(assets/fonts/rv-display.woff2) format("woff2");
+        font-display: block;
+      }
+      @font-face {
+        font-family: "RV Brand";
+        font-weight: 600;
+        src: url(assets/fonts/rv-brand.woff2) format("woff2");
+        font-display: block;
+      }
+      @font-face {
+        font-family: "RV Text";
+        font-weight: 400;
+        src: url(assets/fonts/rv-text.woff2) format("woff2");
+        font-display: block;
+      }
+      :root {
+        --u: max(0.62px, min(calc(100vw / 1280), calc(100dvh / 960)));
+        --ink: #f5faf6;
+        --teal: #88decc;
+        --gutter: calc(48 * var(--u));
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: #03080b;
+        color: var(--ink);
+        font-family: "RV Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--teal);
+        outline-offset: 5px;
+      }
+      .stage {
+        position: relative;
+        height: 100dvh;
+        overflow: hidden;
+      }
+      video,
+      .shade {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      video {
+        object-fit: cover;
+        object-position: 50% 40%;
+      }
+      .horizontal {
+        background: linear-gradient(
+          90deg,
+          rgba(3, 8, 11, 0.683),
+          rgba(3, 8, 11, 0.595) 20%,
+          rgba(3, 8, 11, 0.458) 40%,
+          rgba(3, 8, 11, 0.221) 60%,
+          rgba(3, 8, 11, 0.039) 80%,
+          rgba(3, 8, 11, 0.054)
+        );
+      }
+      .vertical {
+        background: linear-gradient(
+          180deg,
+          rgba(3, 8, 11, 0.06),
+          rgba(3, 8, 11, 0.023) 20%,
+          rgba(3, 8, 11, 0.152) 40%,
+          rgba(3, 8, 11, 0.3) 60%,
+          rgba(3, 8, 11, 0.394) 80%,
+          rgba(3, 8, 11, 0.632)
+        );
+      }
+      .corner {
+        background: radial-gradient(
+          ellipse 93.8% 41.3% at 0% 100%,
+          #03080b,
+          rgba(3, 8, 11, 0)
+        );
+      }
+      .header {
+        position: absolute;
+        top: calc(38 * var(--u));
+        left: var(--gutter);
+        right: var(--gutter);
+        display: flex;
+        align-items: center;
+        gap: calc(18 * var(--u));
+        z-index: 5;
+      }
+      .logo {
+        width: calc(104 * var(--u));
+        height: calc(46 * var(--u));
+        border-radius: 999px;
+        background: rgba(150, 220, 130, 0.035);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        gap: calc(8 * var(--u));
+      }
+      .logo-disc {
+        width: calc(46 * var(--u));
+        height: 100%;
+        background: #030909;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .tree {
+        width: 100%;
+        height: 100%;
+      }
+      .moth {
+        width: calc(39 * var(--u));
+        height: calc(30 * var(--u));
+      }
+      .nav {
+        margin-left: auto;
+        width: calc(442 * var(--u));
+        height: calc(47 * var(--u));
+        border-radius: 999px;
+        background: #030909;
+        position: relative;
+        font-size: calc(12 * var(--u));
+      }
+      .nav > a:not(.partner) {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .nav > a:nth-child(1) {
+        left: 5%;
+      }
+      .nav > a:nth-child(2) {
+        left: 22%;
+      }
+      .nav > a:nth-child(3) {
+        left: 40%;
+      }
+      .nav > a:nth-child(4) {
+        left: 58%;
+      }
+      .nav > a:nth-child(5) {
+        left: 78%;
+      }
+      .nav a:hover,
+      .text-link:hover,
+      .cue:hover {
+        color: #88decc;
+      }
+      .nav .chevron {
+        width: calc(8 * var(--u));
+      }
+      .partner,
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: calc(20 * var(--u));
+        background: #eef1ea;
+        color: #122b2a;
+        border-radius: 999px;
+        height: calc(46 * var(--u));
+        padding: calc(5 * var(--u)) calc(6 * var(--u)) calc(5 * var(--u))
+          calc(20 * var(--u));
+        font-size: calc(14 * var(--u));
+        white-space: nowrap;
+      }
+      .disc {
+        height: calc(36 * var(--u));
+        width: calc(36 * var(--u));
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #122b2a;
+        color: white;
+        transition: background 0.25s;
+      }
+      .disc svg {
+        width: calc(6 * var(--u));
+        height: calc(8 * var(--u));
+      }
+      .partner:hover .disc,
+      .cta:hover .disc {
+        background: #26504d;
+      }
+      .sound,
+      .menu {
+        width: calc(48 * var(--u));
+        height: calc(48 * var(--u));
+        border: 0;
+        border-radius: 50%;
+        background: rgba(3, 9, 9, 0.7);
+        backdrop-filter: blur(12px);
+        padding: 0;
+        flex-shrink: 0;
+      }
+      .sound svg {
+        height: 100%;
+        width: 100%;
+        color: #7ec4b5;
+      }
+      .sound[aria-pressed="false"] .waves {
+        opacity: 0.25;
+      }
+      .menu {
+        display: none;
+      }
+      .hero {
+        position: absolute;
+        bottom: calc(102 * var(--u));
+        left: var(--gutter);
+        z-index: 2;
+      }
+      .brand {
+        font-family:
+          "RV Brand", "Urbanist", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        color: #88decc;
+        font-size: calc(24 * var(--u));
+        margin-bottom: calc(19 * var(--u));
+      }
+      h1 {
+        font-family:
+          "RV Display", "Poppins", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 300;
+        font-size: calc(78 * var(--u));
+        line-height: 1.08;
+        margin: 0 0 calc(28 * var(--u));
+        white-space: nowrap;
+      }
+      .clip {
+        display: block;
+        overflow: hidden;
+      }
+      .line {
+        display: block;
+        letter-spacing: calc(-2.5 * var(--u));
+      }
+      .line:nth-child(1) {
+        letter-spacing: calc(-2 * var(--u));
+      }
+      .lede {
+        font-size: calc(17 * var(--u));
+        line-height: 1.6;
+        color: #ecf1ef;
+        margin: 0 0 calc(30 * var(--u));
+      }
+      .lede span {
+        display: block;
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: calc(28 * var(--u));
+      }
+      .text-link {
+        font-size: calc(14 * var(--u));
+        transition: color 0.2s;
+      }
+      .cue {
+        position: absolute;
+        bottom: calc(38 * var(--u));
+        right: var(--gutter);
+        display: flex;
+        align-items: center;
+        gap: calc(18 * var(--u));
+        font-size: calc(13 * var(--u));
+        color: #ecf1ef;
+        z-index: 2;
+      }
+      .cue svg {
+        width: calc(11 * var(--u));
+        color: #7ccbba;
+      }
+      .waiting
+        :is(
+          .logo,
+          .nav,
+          .partner,
+          .sound,
+          .menu,
+          .brand,
+          .line,
+          .lede span,
+          .cta,
+          .text-link,
+          .cue
+        ) {
+        opacity: 0;
+      }
+      .redraw {
+        transform: translateZ(0);
+      }
+      @media (min-aspect-ratio: 16/9) {
+        video {
+          object-position: 50% 24%;
+        }
+      }
+      @media (max-width: 649.98px), (max-height: 500px) {
+        :root {
+          --u: clamp(0.94px, calc(100vw / 390), 1.2px);
+          --gutter: clamp(18px, 5.6vw, 32px);
+        }
+        video {
+          object-position: 63% 50%;
+        }
+        .horizontal {
+          background: linear-gradient(
+            90deg,
+            rgba(3, 8, 11, 0.42),
+            rgba(3, 8, 11, 0.08)
+          );
+        }
+        .vertical {
+          background: linear-gradient(
+            180deg,
+            rgba(3, 8, 11, 0.15),
+            rgba(3, 8, 11, 0.05) 30%,
+            rgba(3, 8, 11, 0.72) 75%,
+            rgba(3, 8, 11, 0.94)
+          );
+        }
+        .corner {
+          display: none;
+        }
+        .line {
+          letter-spacing: -0.035em;
+        }
+        .actions {
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        .text-link,
+        .cue {
+          padding: 10px 0;
+        }
+        .header {
+          top: max(22px, env(safe-area-inset-top));
+        }
+        .hero {
+          bottom: calc(92px + env(safe-area-inset-bottom));
+        }
+        .cue {
+          bottom: max(16px, env(safe-area-inset-bottom));
+        }
+      }
+      @media (max-width: 649.98px) {
+        .header > .partner {
+          display: none;
+        }
+        .menu {
+          display: block;
+          margin-left: auto;
+        }
+        .menu svg {
+          width: 18px;
+          height: 12px;
+        }
+        .menu path {
+          transition:
+            transform 0.25s,
+            opacity 0.25s;
+          transform-origin: 9px 6px;
+        }
+        .menu[aria-expanded="true"] path:nth-child(1) {
+          transform: translateY(5px) rotate(45deg);
+          transform-origin: 9px 1px;
+        }
+        .menu[aria-expanded="true"] path:nth-child(2) {
+          opacity: 0;
+        }
+        .menu[aria-expanded="true"] path:nth-child(3) {
+          transform: translateY(-5px) rotate(-45deg);
+          transform-origin: 9px 11px;
+        }
+        .nav {
+          display: none;
+          position: absolute;
+          top: 64px;
+          left: 0;
+          right: 0;
+          width: auto;
+          height: auto;
+          border-radius: 20px;
+          padding: 16px;
+          font-size: 17px;
+        }
+        .nav.is-open {
+          display: block;
+        }
+        .nav > a:not(.partner) {
+          position: static !important;
+          height: 48px;
+          padding: 0 12px;
+        }
+        .nav .partner {
+          margin-top: 12px;
+          font-size: 16px;
+          height: 46px;
+        }
+        .nav .disc {
+          width: 36px;
+          height: 36px;
+        }
+        .hero {
+          right: var(--gutter);
+        }
+        h1 {
+          font-size: min(
+            clamp(32px, 10.4vw, 60px),
+            calc((100vw - 2 * var(--gutter)) / 8.7)
+          );
+        }
+        .brand {
+          font-size: 22px;
+        }
+        .lede {
+          font-size: 14px;
+        }
+        .lede span {
+          max-width: 32ch;
+        }
+        .cta {
+          font-size: 14px;
+        }
+        .cue {
+          font-size: 12px;
+        }
+      }
+      @media (min-width: 650px) and (max-width: 1100px) and (min-height: 501px) {
+        :root {
+          --u: 0.94px;
+        }
+        .header {
+          gap: 12px;
+        }
+        .nav {
+          font-size: 11px;
+        }
+        .header > .partner {
+          padding-left: 12px;
+          gap: 8px;
+        }
+        .hero h1 {
+          font-size: 64px;
+        }
+      }
+      @media (min-width: 650px) and (max-aspect-ratio: 4/5) and (min-height: 501px) {
+        :root {
+          --u: 0.94px;
+        }
+        .hero,
+        .cue {
+          transform: scale(1.1);
+          transform-origin: bottom left;
+        }
+        .cue {
+          transform-origin: bottom right;
+        }
+        video {
+          object-position: 58% 50%;
+        }
+      }
+      @media (max-height: 500px) and (min-aspect-ratio: 1/1) {
+        :root {
+          --u: clamp(0.82px, calc(100dvh / 415), 0.94px);
+        }
+        video {
+          object-position: 50% 30%;
+        }
+        .hero {
+          bottom: 55px;
+        }
+        h1 {
+          font-size: clamp(28px, 10dvh, 44px);
+          margin-bottom: 10px;
+          line-height: 1.02;
+        }
+        .brand {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+        .lede {
+          font-size: 12px;
+          line-height: 1.4;
+          margin-bottom: 12px;
+        }
+        .actions {
+          flex-wrap: nowrap;
+        }
+        .header {
+          top: 14px;
+        }
+        .cue {
+          bottom: 10px;
+        }
+        .nav.is-open {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          top: 52px;
+          padding: 8px;
+        }
+        .nav.is-open > a:not(.partner) {
+          height: 38px;
+        }
+        .nav .partner {
+          margin: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      @media (min-width: 650px) and (max-width: 780px) and (min-height: 501px) {
+        :root {
+          --gutter: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage waiting">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+        poster="/brand/imagery/forest-dawn-1600.webp"
+        src="corridor.mp4"
+      ></video>
+      <div class="shade horizontal"></div>
+      <div class="shade vertical"></div>
+      <div class="shade corner"></div>
+      <header class="header">
+        <a class="logo" href="/" target="_top" aria-label="TraceTriage home"
+          ><span class="logo-disc"
+            ><svg
+              class="tree"
+              viewBox="0 0 46 46"
+              fill="none"
+              stroke="#7CC6B5"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            >
+              <path d="M24.2 37V24" />
+              <path d="M19.8 39.3c1.2-1.9 2.8-2.7 4.4-2.7s3.2.8 4.4 2.7" />
+              <path
+                d="M23.8 30.2c-2.8-.6-5.5-2.6-7.2-5-2-1.8-5.2-2-7-4.2-1.4-1.8-1.4-4.2 0-6 2-3 5.8-5.2 8.8-6.2 1.4-.5 2.8-1 4.2-1.3"
+              />
+              <path d="M14.8 23V13.2c0-1.4.8-2.6 2.4-3.4" />
+              <path
+                d="M24 24.2c-1.8-1.8-3.2-3.8-3.7-6.4-.5-2.6-.6-5.2-.3-7.2"
+              />
+              <path
+                d="M24.3 23.2c1.5-3 3.5-6.4 4.3-10.2.4-2.6 1.2-4.1 2.8-4.3H35"
+              />
+              <path
+                d="M24.6 25.7c3-.7 5.8-2.1 7.4-4.5 1.2-1.8 1.4-3.8 2.8-5.2 1.4-1.4 3.2-2.1 5.2-2.4"
+              /></svg></span
+          ><svg class="moth" viewBox="0 0 39 30" fill="#315352">
+            <path
+              id="wing"
+              d="M19.5 12.4C17.5 9.5 14 5 10.8 3 9.6 2.4 8 2.2 6 2.3 4.2 2.4 3.1 3 3 4.8L3.1 9.8C3.2 12.4 5 15 8.3 17.3 6.6 19.5 5.6 21.8 5.4 24.2 5.2 26.2 5.8 27.6 7.3 28 8.8 28.3 10.2 27.3 11.4 25.8 14.2 22.6 17.2 19.8 19.5 17.1Z"
+            />
+            <use href="#wing" transform="matrix(-1 0 0 1 39 0)" /></svg
+        ></a>
+        <nav class="nav" id="intro-nav" aria-label="Introduction navigation">
+          <a href="/products" target="_top">Products</a
+          ><a href="/platform" target="_top" aria-current="page"
+            >Platform
+            <svg
+              class="chevron"
+              viewBox="0 0 11 6"
+              fill="none"
+              stroke="#7CCBBA"
+            >
+              <path d="M.7.7 5.5 5.3 10.3.7" /></svg></a
+          ><a href="/solutions" target="_top">Solutions</a
+          ><a href="/resources" target="_top">Resources</a
+          ><a href="/about" target="_top">Company</a>
+        </nav>
+        <a class="partner" href="/request-demo" target="_top"
+          >Tabletop
+          <span class="disc"
+            ><svg viewBox="0 0 4 7" fill="none" stroke="white">
+              <path d="M.5.5 3.5 3.5.5 6.5" /></svg></span
+        ></a>
+        <button
+          class="menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="intro-nav"
+        >
+          <svg
+            viewBox="0 0 18 12"
+            fill="none"
+            stroke="#F5FAF6"
+            stroke-width="1.5"
+          >
+            <path d="M1 1h16" />
+            <path d="M1 6h16" />
+            <path d="M1 11h16" />
+          </svg></button
+        ><button
+          class="sound"
+          aria-label="Ambient corridor sound"
+          aria-pressed="true"
+        >
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M14.6 19.6h3.6l5.9-4.9v18.6l-5.9-4.9h-3.6z" />
+            <g class="waves">
+              <path d="M27.6 19.6c1.9 2.8 1.9 6 0 8.8" />
+              <path d="M31.2 16.2c3.4 4.9 3.4 10.7 0 15.6" />
+            </g>
+          </svg>
+        </button>
+      </header>
+      <div class="hero">
+        <div class="brand">TraceTriage</div>
+        <h1>
+          <span class="clip"><span class="line">Know what</span></span
+          ><span class="clip"><span class="line">Changed.</span></span
+          ><span class="clip"><span class="line">Stay in control.</span></span>
+        </h1>
+        <p class="lede">
+          <span>Follow agent activity from trace to impact.</span
+          ><span>Connect evidence, ownership and human decisions.</span>
+        </p>
+        <div class="actions">
+          <a class="cta" href="/#homepage-hero" target="_top" data-continue
+            >Enter the website
+            <span class="disc"
+              ><svg viewBox="0 0 5 8" fill="none" stroke="white">
+                <path d="M.6.6 4 4 .6 7.4" /></svg></span></a
+          ><a class="text-link" href="/demo" target="_top"
+            >Explore the incident</a
+          >
+        </div>
+      </div>
+      <a class="cue" href="/#homepage-hero" target="_top" data-continue
+        >Scroll to continue
+        <svg viewBox="0 0 11 6" fill="none" stroke="currentColor">
+          <path d="M.7.7 5.5 5.3 10.3.7" /></svg
+      ></a>
+    </main>
+    <script>
+      (() => {
+        const stage = document.querySelector(".stage"),
+          video = document.querySelector("video"),
+          menu = document.querySelector(".menu"),
+          nav = document.querySelector(".nav"),
+          sound = document.querySelector(".sound"),
+          reduced = matchMedia("(prefers-reduced-motion: reduce)");
+        let motion = !reduced.matches,
+          visible = true,
+          started = false,
+          completed = false,
+          lastTime = 0;
+        const send = (type, extra = {}) => {
+          if (parent !== window)
+            parent.postMessage(
+              { source: "tracetriage-intro", type, ...extra },
+              location.origin,
+            );
+        };
+        const close = (focus = false) => {
+          nav.classList.remove("is-open");
+          menu.setAttribute("aria-expanded", "false");
+          menu.setAttribute("aria-label", "Open navigation");
+          if (focus) menu.focus();
+        };
+        const mobilePartner = document
+          .querySelector(".partner")
+          .cloneNode(true);
+        nav.append(mobilePartner);
+        if (innerWidth >= 650) mobilePartner.style.display = "none";
+        addEventListener("resize", () => {
+          mobilePartner.style.display = innerWidth >= 650 ? "none" : "";
+          if (innerWidth >= 650) close();
+        });
+        menu.onclick = () => {
+          const open = menu.getAttribute("aria-expanded") !== "true";
+          menu.setAttribute("aria-expanded", String(open));
+          menu.setAttribute(
+            "aria-label",
+            open ? "Close navigation" : "Open navigation",
+          );
+          nav.classList.toggle("is-open", open);
+          if (open) nav.querySelector("a").focus();
+        };
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") close(true);
+          if (
+            [
+              "ArrowDown",
+              "ArrowUp",
+              "PageDown",
+              "PageUp",
+              " ",
+              "Home",
+              "End",
+            ].includes(e.key) &&
+            !nav.classList.contains("is-open")
+          ) {
+            send("interaction");
+            if (parent !== window) {
+              e.preventDefault();
+              send("scroll", {
+                delta:
+                  e.key === "Home"
+                    ? -innerHeight
+                    : e.key === "End"
+                      ? innerHeight
+                      : e.key === "ArrowUp" || e.key === "PageUp"
+                        ? -innerHeight * 0.8
+                        : innerHeight * 0.8,
+              });
+            }
+          }
+        });
+        document.addEventListener("pointerdown", (e) => {
+          if (!nav.contains(e.target) && !menu.contains(e.target)) close();
+        });
+        document.querySelectorAll("a").forEach((a) =>
+          a.addEventListener("click", (e) => {
+            close();
+            if (parent !== window) {
+              e.preventDefault();
+              send(a.hasAttribute("data-continue") ? "continue" : "navigate", {
+                href: a.getAttribute("href"),
+              });
+            }
+          }),
+        );
+        sound.onclick = () => {
+          const on = sound.getAttribute("aria-pressed") !== "true";
+          sound.setAttribute("aria-pressed", String(on));
+          video.muted = !on;
+        };
+        const animations = [];
+        const animate = (
+          el,
+          k,
+          delay,
+          duration,
+          easing = "cubic-bezier(.16,1,.3,1)",
+        ) => {
+          if (el)
+            animations.push(
+              el.animate(k, { delay, duration, easing, fill: "backwards" }),
+            );
+        };
+        const finish = () => {
+          stage.classList.remove("waiting");
+        };
+        setTimeout(finish, 3500);
+        const entrance = () => {
+          if (started) return;
+          started = true;
+          finish();
+          if (!motion) return;
+          const factor =
+              (document.querySelector(".cta").getBoundingClientRect().height /
+                46) *
+              (innerWidth < 650 ? 0.8 : 1),
+            lift = (s, px, delay, dur, ease) =>
+              document.querySelectorAll(s).forEach((el) =>
+                animate(
+                  el,
+                  [
+                    {
+                      opacity: 0,
+                      transform: `translateY(${Math.round(px * factor)}px)`,
+                    },
+                    { opacity: 1, transform: "translateY(0)" },
+                  ],
+                  delay,
+                  dur,
+                  ease,
+                ),
+              );
+          animate(
+            document.querySelector(".logo"),
+            [{ opacity: 0 }, { opacity: 1 }],
+            0,
+            500,
+            "cubic-bezier(.25,1,.5,1)",
+          );
+          document.querySelectorAll(".tree path").forEach((p, i) => {
+            const n = p.getTotalLength();
+            animate(
+              p,
+              [
+                { strokeDasharray: `${n} ${n}`, strokeDashoffset: n },
+                { strokeDasharray: `${n} ${n}`, strokeDashoffset: 0 },
+              ],
+              80 + 45 * i,
+              820,
+              "cubic-bezier(.45,0,.2,1)",
+            );
+          });
+          animate(
+            document.querySelector(".moth"),
+            [
+              { opacity: 0, transform: "scale(.92)" },
+              { opacity: 1, transform: "scale(1)" },
+            ],
+            420,
+            650,
+          );
+          lift(innerWidth < 650 ? ".menu" : ".nav", 8, 120, 700);
+          nav.querySelectorAll("a").forEach((el, i) =>
+            animate(
+              el,
+              [
+                {
+                  opacity: 0,
+                  transform: `translateY(${Math.round(4 * factor)}px)`,
+                },
+                { opacity: 1, transform: "none" },
+              ],
+              260 + i * 45,
+              700,
+            ),
+          );
+          lift(".header>.partner", 8, 120, 700);
+          lift(".sound", 8, 200, 700);
+          lift(".brand", 10, 300, 650);
+          document
+            .querySelectorAll(".line")
+            .forEach((el, i) =>
+              animate(
+                el,
+                [
+                  { transform: "translateY(115%)" },
+                  { transform: "translateY(0)" },
+                ],
+                380 + 90 * i,
+                1050,
+              ),
+            );
+          document.querySelectorAll(".lede span").forEach((el, i) =>
+            animate(
+              el,
+              [
+                {
+                  opacity: 0,
+                  transform: `translateY(${Math.round(14 * factor)}px)`,
+                },
+                { opacity: 1, transform: "none" },
+              ],
+              800 + i * 60,
+              800,
+            ),
+          );
+          lift(".cta", 12, 1000, 800);
+          lift(".text-link", 8, 1100, 600, "cubic-bezier(.25,1,.5,1)");
+          lift(".cue", -6, 1250, 700);
+          Promise.all(animations.map((a) => a.finished.catch(() => {}))).then(
+            () => {
+              animations.forEach((a) => a.cancel());
+              document
+                .querySelectorAll(".logo,.actions")
+                .forEach((el) => el.classList.add("redraw"));
+              requestAnimationFrame(() =>
+                document
+                  .querySelectorAll(".redraw")
+                  .forEach((el) => el.classList.remove("redraw")),
+              );
+            },
+          );
+        };
+        Promise.all([
+          document.fonts.ready,
+          new Promise((resolve) => {
+            if (video.readyState >= 2) resolve();
+            else video.addEventListener("loadeddata", resolve, { once: true });
+          }),
+        ]).then(entrance);
+        if (!motion) {
+          finish();
+          video.pause();
+        }
+        video.addEventListener("timeupdate", () => {
+          const t = video.currentTime;
+          if (
+            !completed &&
+            video.duration &&
+            (t >= video.duration - 0.25 || (lastTime > 1 && t < lastTime))
+          ) {
+            completed = true;
+            send("complete");
+          }
+          lastTime = t;
+        });
+        video.addEventListener("error", () => {
+          finish();
+          send("video-error");
+        });
+        addEventListener("message", (e) => {
+          if (
+            e.origin !== location.origin ||
+            e.source !== parent ||
+            e.data?.source !== "tracetriage-parent"
+          )
+            return;
+          if (e.data.type === "state") {
+            motion = e.data.motion;
+            visible = e.data.visible;
+            if (!motion) {
+              animations.forEach((a) => a.cancel());
+              finish();
+            }
+            if (motion && visible) video.play().catch(() => {});
+            else video.pause();
+          }
+        });
+        addEventListener(
+          "wheel",
+          (e) => {
+            if (parent !== window && !nav.classList.contains("is-open")) {
+              e.preventDefault();
+              send("interaction");
+              send("scroll", { delta: e.deltaY });
+            }
+          },
+          { passive: false },
+        );
+        let touchY;
+        addEventListener(
+          "touchstart",
+          (e) => {
+            touchY = e.touches[0].clientY;
+            send("interaction");
+          },
+          { passive: true },
+        );
+        addEventListener(
+          "touchmove",
+          (e) => {
+            if (
+              parent !== window &&
+              !nav.classList.contains("is-open") &&
+              touchY !== undefined
+            ) {
+              e.preventDefault();
+              const y = e.touches[0].clientY;
+              send("scroll", { delta: touchY - y });
+              touchY = y;
+            }
+          },
+          { passive: false },
+        );
+        send("ready");
+      })();
+    </script>
+  </body>
+</html>
