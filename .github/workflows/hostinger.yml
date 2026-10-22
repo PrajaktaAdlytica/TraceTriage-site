@@ -1,0 +1,42 @@
+name: Build website for Hostinger
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          SITE_URL: https://tracetriage.com
+      - run: npm run qa:static
+      - name: Publish compiled files to hosting branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          deploy_dir="$RUNNER_TEMP/tracetriage-hostinger"
+          git fetch origin hostinger-deploy
+          git worktree add --detach "$deploy_dir" FETCH_HEAD
+          rsync -a --delete --exclude=.git dist/ "$deploy_dir/"
+          cd "$deploy_dir"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if git diff --cached --quiet; then
+            echo 'Built website is already current.'
+            exit 0
+          fi
+          git commit -m "Build website from ${GITHUB_SHA:0:7}"
+          git push origin HEAD:hostinger-deploy

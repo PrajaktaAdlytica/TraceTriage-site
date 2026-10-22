@@ -77,3 +77,13 @@ See [motion and interaction notes](docs/INTERACTIONS.md) and [QA results](docs/Q
 - [Manual Vercel setup](docs/VERCEL-SETUP.txt).
 
 Run `npm run build && npm run qa:static` to repeat the static release check. Earlier reports in `docs/` describe previous QA passes; `qa/FINAL-QA.txt` records the publication pass.
+
+## Hostinger deployment
+
+Use `hostinger-deploy` in Hostinger's Git screen, destination `public_html`.
+That branch contains only the compiled website. Do not deploy `main` to standard PHP/HTML hosting.
+The GitHub Actions workflow `.github/workflows/hostinger.yml` builds pushes to `main` using
+`SITE_URL=https://tracetriage.com`, checks the static output, and updates `hostinger-deploy`.
+Hostinger must have automatic deployment enabled for that branch; otherwise use its Deploy button after a successful workflow run.
+The included `.htaccess` handles prerendered clean URLs, the 404 page and Git metadata access.
+Keep Vercel available until the Hostinger domain, nested routes and intro have been verified.
