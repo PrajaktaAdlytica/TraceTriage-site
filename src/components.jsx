@@ -417,6 +417,13 @@ export function Footer() {
             <br />
             Accountable outcomes.
           </p>
+          <address className="footer-address">
+            12 Truong Cong Dinh
+            <br />
+            Ward 13, Tan Binh District
+            <br />
+            Ho Chi Minh City 790094, Vietnam
+          </address>
           <div className="social-icons">
             <span
               tabIndex="0"

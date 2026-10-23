@@ -582,6 +582,21 @@ select:focus-visible,
 .home-bottom > a:hover {
   color: var(--apricot);
 }
+.funding-announcement {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 28px;
+  padding-block: 42px;
+  border-bottom: 1px solid var(--line);
+}
+.funding-announcement h2 {
+  font-size: clamp(30px, 3vw, 48px);
+  line-height: 1.1;
+}
+.funding-announcement p {
+  margin-top: 12px;
+  color: var(--muted);
+}
 .opening-strip {
   padding-block: 64px;
   display: grid;
@@ -3048,6 +3063,27 @@ textarea::placeholder {
   line-height: 1.1;
   color: #c8bfb4;
 }
+.footer-address {
+  margin-top: 22px;
+  color: #c8bfb4;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.6;
+}
+.company-details {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+}
+.company-details h2 {
+  font-size: clamp(36px, 4vw, 64px);
+}
+.company-details address {
+  margin-top: 20px;
+  font-style: normal;
+  line-height: 1.7;
+}
 .footer-links h4 {
   font-size: 10px;
   text-transform: uppercase;
@@ -3890,6 +3926,8 @@ textarea::placeholder {
     grid-row: auto;
     grid-column: 1/3;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
   }
@@ -4066,6 +4104,10 @@ textarea::placeholder {
   }
   .home-bottom > a {
     gap: 13px;
+  }
+  .funding-announcement,
+  .company-details {
+    grid-template-columns: 1fr;
   }
   .opening-strip {
     grid-template-columns: 1fr;

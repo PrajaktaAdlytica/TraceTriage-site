@@ -133,6 +133,18 @@ export function Home() {
           </div>
         </div>
       </section>
+      <section
+        className="funding-announcement container"
+        aria-labelledby="funding-title"
+      >
+        <span className="eyebrow">Company announcement</span>
+        <div>
+          <h2 id="funding-title" className="display">
+            TraceTriage has secured venture capital funding.
+          </h2>
+          <p>The investor and funding amount will be announced later.</p>
+        </div>
+      </section>
       <section className="opening-strip container" data-reveal>
         <span className="eyebrow">The missing context</span>
         <p>
@@ -1036,6 +1048,23 @@ export function About() {
           ],
         ]}
       />
+      <section className="section container company-details">
+        <span className="eyebrow">Company details</span>
+        <div>
+          <h2 className="display">Our address.</h2>
+          <address>
+            12 Truong Cong Dinh
+            <br />
+            Ward 13
+            <br />
+            Tan Binh District
+            <br />
+            Ho Chi Minh City 790094
+            <br />
+            Vietnam
+          </address>
+        </div>
+      </section>
       <CTA title="Help define a useful agent incident evaluation." />
     </>
   );
